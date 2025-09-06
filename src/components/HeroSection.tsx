@@ -1,29 +1,34 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-
 const HeroSection = () => {
   const scrollToPlans = () => {
-    document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('plans')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Premium mesh gradient background */}
       <div className="absolute inset-0 mesh-gradient" />
       
       {/* Floating orbs with glow effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-primary/20 rounded-full blur-3xl floating" />
-        <div className="absolute top-3/4 right-1/4 w-24 h-24 bg-primary-glow/30 rounded-full blur-2xl floating" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-3/4 w-40 h-40 bg-accent/15 rounded-full blur-3xl floating" style={{ animationDelay: '4s' }} />
-        <div className="absolute top-1/6 right-1/3 w-20 h-20 bg-primary-glow/25 rounded-full blur-xl floating" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-3/4 right-1/4 w-24 h-24 bg-primary-glow/30 rounded-full blur-2xl floating" style={{
+        animationDelay: '2s'
+      }} />
+        <div className="absolute top-1/2 left-3/4 w-40 h-40 bg-accent/15 rounded-full blur-3xl floating" style={{
+        animationDelay: '4s'
+      }} />
+        <div className="absolute top-1/6 right-1/3 w-20 h-20 bg-primary-glow/25 rounded-full blur-xl floating" style={{
+        animationDelay: '1s'
+      }} />
       </div>
 
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="fade-in-down">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass-effect-strong mb-8 pulse-glow">
             <Sparkles className="w-5 h-5 text-primary-glow animate-pulse" />
-            <span className="text-sm font-medium text-foreground">Powered by ChatGPT 5.0</span>
+            <span className="text-sm font-medium text-foreground">ChatGPT 5.0</span>
           </div>
         </div>
 
@@ -43,11 +48,7 @@ const HeroSection = () => {
         </p>
 
         <div className="fade-in-up delay-500">
-          <Button
-            onClick={scrollToPlans}
-            size="lg"
-            className="group px-12 py-8 text-xl font-semibold button-glow hover:scale-110 spring-transition glow-intense"
-          >
+          <Button onClick={scrollToPlans} size="lg" className="group px-12 py-8 text-xl font-semibold button-glow hover:scale-110 spring-transition glow-intense">
             Comece Agora
             <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 spring-transition" />
           </Button>
@@ -59,7 +60,7 @@ const HeroSection = () => {
           <div className="flex justify-center items-center gap-8 opacity-60">
             <div className="text-2xl font-bold">98%</div>
             <div className="w-px h-6 bg-border" />
-            <div className="text-sm">Taxa de Aprovação</div>
+            <div className="text-sm">Taxa de Acertividade</div>
             <div className="w-px h-6 bg-border" />
             <div className="text-2xl font-bold">10k+</div>
             <div className="w-px h-6 bg-border" />
@@ -67,8 +68,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
