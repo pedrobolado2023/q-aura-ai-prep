@@ -8,71 +8,81 @@ All colors MUST be HSL for consistency.
 
 @layer base {
   :root {
-    /* Base colors - Modern tech palette */
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    /* Modern Dark Theme - Premium colors */
+    --background: 224 21% 6%;
+    --foreground: 210 40% 98%;
 
-    /* Card and surface colors */
-    --card: 240 10% 6%;
-    --card-foreground: 0 0% 98%;
+    /* Card and surface colors with depth */
+    --card: 224 25% 8%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 240 10% 6%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 224 25% 8%;
+    --popover-foreground: 210 40% 98%;
 
-    /* Brand colors - Blue to purple gradient theme */
-    --primary: 221 83% 53%;
-    --primary-foreground: 0 0% 98%;
-    --primary-glow: 262 83% 58%;
+    /* Premium brand colors - Vibrant gradients */
+    --primary: 250 100% 68%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 280 100% 78%;
+    --primary-dark: 240 90% 58%;
 
-    --secondary: 240 5% 84%;
-    --secondary-foreground: 240 10% 3.9%;
+    --secondary: 224 30% 15%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 45%;
+    --muted: 224 25% 12%;
+    --muted-foreground: 220 15% 70%;
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 280 100% 78%;
+    --accent-foreground: 224 21% 6%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
     /* Form and interaction colors */
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 221 83% 53%;
+    --border: 224 25% 18%;
+    --input: 224 25% 12%;
+    --ring: 250 100% 68%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Q-Aura specific design tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(221 83% 53% / 0.8), hsl(262 83% 58% / 0.8));
-    --card-gradient: linear-gradient(145deg, hsl(240 10% 6% / 0.8), hsl(240 5% 8% / 0.9));
-    --glass-bg: hsl(240 10% 10% / 0.5);
-    --glass-border: hsl(240 5% 20% / 0.3);
+    /* Advanced design tokens - Premium effects */
+    --hero-gradient: 
+      radial-gradient(ellipse 80% 50% at 50% -20%, hsl(250 100% 68% / 0.3) 0%, transparent 60%),
+      linear-gradient(135deg, hsl(240 100% 8%) 0%, hsl(250 50% 12%) 50%, hsl(280 30% 16%) 100%);
     
-    /* Shadows */
-    --shadow-glow: 0 0 40px hsl(221 83% 53% / 0.3);
-    --shadow-card: 0 8px 32px hsl(240 10% 3.9% / 0.3);
-    --shadow-button: 0 4px 20px hsl(221 83% 53% / 0.4);
+    --mesh-gradient: 
+      radial-gradient(at 40% 20%, hsl(280 100% 70% / 0.3) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsl(260 100% 70% / 0.2) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsl(300 100% 70% / 0.2) 0px, transparent 50%),
+      radial-gradient(at 80% 50%, hsl(240 100% 70% / 0.3) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsl(320 100% 70% / 0.2) 0px, transparent 50%),
+      radial-gradient(at 80% 100%, hsl(290 100% 70% / 0.3) 0px, transparent 50%);
     
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --card-gradient: 
+      linear-gradient(145deg, hsl(224 25% 8% / 0.9) 0%, hsl(224 30% 12% / 0.95) 100%);
+    
+    --glass-bg: hsl(224 25% 8% / 0.7);
+    --glass-border: hsl(250 100% 68% / 0.2);
+    
+    /* Premium shadows with color */
+    --shadow-glow: 0 25px 50px -12px hsl(250 100% 68% / 0.4);
+    --shadow-card: 0 20px 40px -10px hsl(224 21% 4% / 0.6);
+    --shadow-button: 0 10px 40px hsl(250 100% 68% / 0.5);
+    --shadow-intense: 0 35px 60px -12px hsl(250 100% 68% / 0.6);
+    
+    /* Smooth animations with bezier curves */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-spring: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar tokens */
+    --sidebar-background: 210 40% 98%;
+    --sidebar-foreground: 224 21% 20%;
+    --sidebar-primary: 224 21% 10%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 224 25% 95%;
+    --sidebar-accent-foreground: 224 21% 15%;
+    --sidebar-border: 224 25% 88%;
+    --sidebar-ring: 250 100% 68%;
   }
 
   /* Light mode - elegant alternative */
@@ -107,6 +117,8 @@ All colors MUST be HSL for consistency.
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    background: var(--hero-gradient);
+    background-attachment: fixed;
   }
 
   /* Custom scroll bar */
@@ -128,9 +140,13 @@ All colors MUST be HSL for consistency.
 }
 
 @layer utilities {
-  /* Q-Aura specific utility classes */
+  /* Q-Aura Premium utility classes */
   .hero-gradient {
     background: var(--hero-gradient);
+  }
+  
+  .mesh-gradient {
+    background: var(--mesh-gradient);
   }
   
   .card-gradient {
@@ -140,12 +156,24 @@ All colors MUST be HSL for consistency.
   .glass-effect {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+  
+  .glass-effect-strong {
+    background: hsl(224 25% 8% / 0.8);
+    border: 1px solid hsl(250 100% 68% / 0.3);
+    backdrop-filter: blur(30px) saturate(200%);
+    -webkit-backdrop-filter: blur(30px) saturate(200%);
+    box-shadow: var(--shadow-card), inset 0 1px 0 hsl(250 100% 68% / 0.1);
   }
   
   .glow-effect {
     box-shadow: var(--shadow-glow);
+  }
+  
+  .glow-intense {
+    box-shadow: var(--shadow-intense);
   }
   
   .card-shadow {
@@ -154,6 +182,18 @@ All colors MUST be HSL for consistency.
   
   .button-glow {
     box-shadow: var(--shadow-button);
+    position: relative;
+  }
+  
+  .button-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    z-index: -1;
+    filter: blur(20px);
+    opacity: 0.7;
   }
   
   .smooth-transition {
@@ -162,6 +202,27 @@ All colors MUST be HSL for consistency.
   
   .bounce-transition {
     transition: var(--transition-bounce);
+  }
+  
+  .spring-transition {
+    transition: var(--transition-spring);
+  }
+  
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)), hsl(var(--accent)));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease-in-out infinite;
+  }
+  
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .pulse-glow {
+    animation: pulseGlow 3s ease-in-out infinite;
   }
 
   /* Animation classes */
@@ -223,6 +284,33 @@ All colors MUST be HSL for consistency.
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 60px hsl(var(--primary) / 0.8);
   }
 }
 

@@ -42,13 +42,15 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="py-24 px-6">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Por que escolher o <span className="text-primary">Q-Aura</span>?
+    <section className="py-32 px-6 relative">
+      {/* Background mesh gradient */}
+      <div className="absolute inset-0 mesh-gradient opacity-30" />
+      <div className="container mx-auto relative z-10">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl lg:text-6xl font-bold mb-8">
+            Por que escolher o <span className="gradient-text">Q-Aura</span>?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Revolucione seus estudos com a tecnologia mais avançada de geração de questões.
           </p>
         </div>
@@ -59,18 +61,21 @@ const FeaturesSection = () => {
             return (
               <Card
                 key={feature.title}
-                className="group p-8 glass-effect hover:shadow-glow smooth-transition hover:scale-105 border-0"
+                className="group p-10 glass-effect-strong hover:glow-intense spring-transition hover:scale-105 border-0 relative overflow-hidden"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${feature.gradient} mb-6`}>
-                  <Icon className="w-6 h-6 text-white" />
+                {/* Card ambient glow */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5 rounded-xl opacity-0 group-hover:opacity-100 spring-transition" />
+                
+                <div className={`relative inline-flex p-4 rounded-2xl bg-gradient-to-r ${feature.gradient} mb-8 glow-effect`}>
+                  <Icon className="w-7 h-7 text-white" />
                 </div>
                 
-                <h3 className="text-xl font-semibold mb-4 group-hover:text-primary smooth-transition">
+                <h3 className="text-2xl font-bold mb-6 group-hover:gradient-text spring-transition">
                   {feature.title}
                 </h3>
                 
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-lg">
                   {feature.description}
                 </p>
               </Card>

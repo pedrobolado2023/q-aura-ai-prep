@@ -2,16 +2,16 @@ import { Separator } from "@/components/ui/separator";
 
 const Footer = () => {
   return (
-    <footer className="py-12 px-6 border-t border-border/50">
-      <div className="container mx-auto">
+    <footer className="py-16 px-6 border-t border-primary/20 glass-effect-strong relative">
+      {/* Footer ambient glow */}
+      <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent" />
+      <div className="container mx-auto relative z-10">
         <div className="text-center">
-          <h3 className="text-2xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-              Q-Aura
-            </span>
+          <h3 className="text-3xl font-bold mb-6">
+            <span className="gradient-text">Q-Aura</span>
           </h3>
           
-          <p className="text-muted-foreground mb-8 max-w-md mx-auto">
+          <p className="text-lg text-muted-foreground mb-10 max-w-md mx-auto">
             Transformando a preparação para concursos públicos com inteligência artificial.
           </p>
 
@@ -20,7 +20,7 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-sm text-muted-foreground">
             <a 
               href="/termos" 
-              className="hover:text-primary smooth-transition"
+              className="hover:text-primary-glow spring-transition font-medium"
             >
               Termos de Serviço
             </a>
@@ -29,7 +29,7 @@ const Footer = () => {
             
             <a 
               href="/privacidade" 
-              className="hover:text-primary smooth-transition"
+              className="hover:text-primary-glow spring-transition font-medium"
             >
               Política de Privacidade
             </a>
@@ -38,7 +38,7 @@ const Footer = () => {
             
             <a 
               href="/contato" 
-              className="hover:text-primary smooth-transition"
+              className="hover:text-primary-glow spring-transition font-medium"
             >
               Contato
             </a>
